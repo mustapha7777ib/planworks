@@ -17,7 +17,7 @@ const slides = [
     image: Building1,
     title: "Simple Project Management",
     highlight: "That Actually Works",
-    description: "Plainworks helps teams plan, track, and deliver projects on time — without the complexity.",
+    description: "Planworks helps teams plan, track, and deliver projects on time — without the complexity.",
   },
   {
     id: 2,

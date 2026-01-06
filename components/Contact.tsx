@@ -31,7 +31,7 @@ export default function Contact() {
 
           {/* Simplified Email Button */}
           <a 
-            href="mailto:hello@plainworks.com" 
+            href="mailto:hello@planworks.com" 
             className="group inline-flex items-center gap-6 bg-slate-900 text-white p-2 pr-8 rounded-full hover:bg-orange-400 transition-all duration-300"
           >
             <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-orange-400 transition-colors">
@@ -39,7 +39,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 group-hover:text-white/80">Click to email</span>
-              <span className="text-lg font-semibold tracking-tight">hello@plainworks.com</span>
+              <span className="text-lg font-semibold tracking-tight">hello@planworks.com</span>
             </div>
             <ArrowRight size={20} className="ml-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           </a>
