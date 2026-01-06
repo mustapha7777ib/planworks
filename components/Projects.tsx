@@ -28,7 +28,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
@@ -39,7 +39,7 @@ export default function Projects() {
           </div>
           <div className="flex justify-between items-end gap-8">
             <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-slate-900">
-              Proof of <span className="text-orange-600">concept.</span>
+              Proof of <span className="text-orange-400">concept.</span>
             </h2>
             <Link 
               href="/projects" 
