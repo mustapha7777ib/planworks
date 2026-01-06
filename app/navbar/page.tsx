@@ -43,13 +43,13 @@ export default function Navbar() {
             {/* Brand Logo */}
             <Link href="/" className="group flex items-center gap-2.5">
               <div className="flex items-center justify-centertransition-transform">
-                <img src={Logo.src} alt="Plainworks Logo" className="w-10 h-10 object-contain rounded-lg " />
+                <img src={Logo.src} alt="Planworks Logo" className="w-10 h-10 object-contain rounded-lg " />
               </div>
               <span className={cn(
                 "text-xl font-bold tracking-tighter text-orange-400",
                 scrolled ? " text-orange-400" : "text-orange-400 md:text-white"
               )}>
-                Plainworks <span>Consulting</span>
+                Planworks <span>Consulting</span>
               </span>
             </Link>
 

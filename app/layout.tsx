@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Plainworks - Simple & Powerful Project Management",
+  title: "Planworks - Simple & Powerful Project Management",
   description: "Streamline your team's workflow with intuitive task tracking, collaboration, and reporting.",
 };
 
