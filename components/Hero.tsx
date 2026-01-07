@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from './ui/button';
-import Link from 'next/link';
 
 // Import your images (adjust paths as needed)
-import Building1 from '@public/images/building-1.jpg';
-import Building2 from '@public/images/building-2.jpg';
-import Building3 from '@public/images/building-3.jpg';
+import Building1 from '@public/images/building-1.webp';
+import Building2 from '@public/images/building-2.webp';
+import Building3 from '@public/images/building-3.webp';
 
 const slides = [
   {
@@ -46,14 +45,6 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  // Preload images
-  useEffect(() => {
-    slides.forEach((slide) => {
-      const img = new Image();
-      img.src = slide.image.src;
-    });
-  }, []);
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
@@ -71,12 +62,14 @@ export default function Hero() {
         className="flex transition-transform duration-1000 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {slides.map((slide, index) => (
-          <div key={slide.id} className="w-full flex-shrink-0 h-full relative">
-            <img
-              src={slide.image.src}
+        {slides.map((slide) => (
+          <div key={slide.id} className="w-full shrink-0 h-full relative">
+            <Image
+              src={slide.image}
               alt={`Slide ${slide.id}`}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority={slide.id === 1}
             />
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/50" />
