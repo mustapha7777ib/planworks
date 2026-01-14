@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 // Import your images (adjust paths as needed)
 import Building1 from '@public/images/building-1.webp';
@@ -14,22 +15,28 @@ const slides = [
     id: 1,
     image: Building1,
     title: "From Concept to Completion",
-    highlight: "Seamless Integrated Delivery",
+    highlight: "Seamless Design, Construction, and Project Delivery for Every Sector",
     description: "Planwork Group delivers fully integrated Design & Build solutions for complex infrastructure, managed under a single accountable framework.",
+    cta: "Explore Our Services",
+    link: "/services"
   },
   {
     id: 2,
     image: Building2,
     title: "Precision in Every Project",
-    highlight: "On Time. On Budget.",
+    highlight: "Technology-driven planning, monitoring, and execution that ensures results on time and on budget",
     description: "Technology-driven planning and disciplined execution that ensures structural integrity and financial certainty across every sector.",
+    cta: "Discover How",
+    link: "/services"
   },
   {
     id: 3,
     image: Building3,
-    title: "Building Long-Term Value",
-    highlight: "Engineering Excellence",
+    title: "Building Value, Delivering Excellence",
+    highlight: "End-to-end solutions across construction, procurement, and project management consultancy",
     description: "From strategic procurement to facility management, we provide end-to-end solutions that protect and optimize your physical assets.",
+    cta: "Get in Touch Today",
+    link: "/contact"
   },
 ];
 
@@ -57,7 +64,7 @@ export default function Hero() {
           <div key={slide.id} className="w-full shrink-0 h-full relative">
             <Image
               src={slide.image}
-              alt={`Slide ${slide.id}`}
+              alt={slide.title}
               fill
               className="object-cover"
               priority={slide.id === 1}
@@ -82,23 +89,28 @@ export default function Hero() {
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 {currentSlide.title}
-                <span className="block text-orange-400 mt-2">
-                  {currentSlide.highlight}
-                </span>
               </h1>
+              
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-orange-400 mt-4 font-semibold">
+                {currentSlide.highlight}
+              </h2>
 
-              <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto lg:mx-0">
                 {currentSlide.description}
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href={currentSlide.link}
+                  className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-md transition-colors duration-300"
+                >
+                  {currentSlide.cta}
+                </Link>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
-
-   
 
       {/* Dots Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">

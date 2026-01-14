@@ -13,31 +13,31 @@ import Link from "next/link";
 const services = [
   {
     title: "Design & Build",
-    description: "Integrated design and construction solutions that align creativity, engineering precision, and execution certainty.",
+    description: "Integrated design and construction solutions that align creativity, engineering precision, and execution certainty under one accountable framework.",
     icon: Compass,
     tag: "Integrated"
   },
   {
     title: "Construction & Infrastructure",
-    description: "End-to-end delivery for buildings and infrastructure, executed with discipline, safety, and quality assurance.",
+    description: "End-to-end construction delivery for buildings and infrastructure, executed with discipline, safety, and quality assurance.",
     icon: HardHat,
     tag: "Execution"
   },
   {
     title: "Procurement",
-    description: "Strategic sourcing and supply of materials and equipment to safeguard cost, quality, and schedule outcomes.",
+    description: "Strategic sourcing and supply of materials, equipment, and services to safeguard cost, quality, and schedule outcomes.",
     icon: Truck,
     tag: "Supply Chain"
   },
   {
-    title: "Project Management (PMC)",
+    title: "Project Management Consultancy (PMC)",
     description: "Independent project leadership covering planning, controls, governance, and PMO setup.",
     icon: BarChart3,
     tag: "Governance"
   },
   {
     title: "Facility & Asset Management",
-    description: "Operational and maintenance services that protect long-term asset value and ensure optimal performance.",
+    description: "Operational and maintenance services that protect long-term asset value.",
     icon: ShieldCheck,
     tag: "Lifecycle"
   },
@@ -66,7 +66,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Grid Section - 3 columns on desktop to balance 5 items */}
+        {/* Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 overflow-hidden rounded-sm shadow-sm">
           {services.map((service, index) => (
             <div 

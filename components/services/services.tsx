@@ -112,7 +112,7 @@ export default function ServicesPage() {
                     {service.details}
                   </p>
                   <Link 
-                    href="#contact" 
+                    href="/contact" 
                     className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-900 hover:text-orange-400 transition-colors"
                   >
                     Inquire for service <ArrowUpRight size={14} />
