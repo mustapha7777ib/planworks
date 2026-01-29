@@ -12,15 +12,14 @@ export default function ContactPage() {
         <div className="max-w-4xl mb-20">
           <div className="flex items-center gap-2 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em] mb-6">
             <Minus size={16} />
-            <span>Connect with us</span>
+            <span>Project Inquiry</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8">
             Let's build <br />
-            <span className="text-orange-400 italic font-medium">something lasting.</span>
+            <span className="text-orange-400 italic font-medium">with integrity.</span>
           </h1>
           <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
-            Whether you're starting a new development or looking for project management consultancy, 
-            our team is ready to provide the technical rigor your project deserves.
+            Tower Nigeria Limited is ready to partner with clients seeking reliable construction delivery rooted in discipline and professional workmanship.
           </p>
         </div>
 
@@ -34,7 +33,7 @@ export default function ContactPage() {
                   <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Full Name</label>
                   <input 
                     type="text" 
-                    placeholder="John Doe"
+                    placeholder="Full Name"
                     className="w-full bg-slate-50 border-b border-slate-200 p-4 focus:border-orange-400 focus:outline-none transition-colors"
                   />
                 </div>
@@ -42,33 +41,33 @@ export default function ContactPage() {
                   <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Email Address</label>
                   <input 
                     type="email" 
-                    placeholder="john@company.com"
+                    placeholder="email@company.com"
                     className="w-full bg-slate-50 border-b border-slate-200 p-4 focus:border-orange-400 focus:outline-none transition-colors"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Subject / Service Interest</label>
+                <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Service Required</label>
                 <select className="w-full bg-slate-50 border-b border-slate-200 p-4 focus:border-orange-400 focus:outline-none transition-colors appearance-none">
-                  <option>Design & Build</option>
-                  <option>Project Management Consultancy</option>
-                  <option>Procurement Services</option>
-                  <option>General Inquiry</option>
+                  <option>Building & Infrastructure Construction</option>
+                  <option>Design & Build Services</option>
+                  <option>Procurement & Supply Management</option>
+                  <option>Project Management & Site Supervision</option>
                 </select>
               </div>
 
               <div className="space-y-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Message</label>
+                <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Project Details</label>
                 <textarea 
                   rows={5}
-                  placeholder="Tell us about your project goals..."
+                  placeholder="Describe your construction or infrastructure requirements..."
                   className="w-full bg-slate-50 border-b border-slate-200 p-4 focus:border-orange-400 focus:outline-none transition-colors resize-none"
                 />
               </div>
 
               <button className="group flex items-center gap-3 bg-slate-900 text-white px-10 py-5 rounded-full hover:bg-orange-400 transition-all duration-300">
-                <span className="font-bold tracking-wide uppercase text-xs">Send Message</span>
+                <span className="font-bold tracking-wide uppercase text-xs">Submit Inquiry</span>
                 <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
             </form>
@@ -79,12 +78,12 @@ export default function ContactPage() {
             
             {/* Office Info */}
             <div>
-              <h3 className="font-mono text-[10px] uppercase tracking-[0.3em] text-orange-400 mb-6">Headquarters</h3>
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.3em] text-orange-400 mb-6">Office</h3>
               <div className="flex gap-4">
                 <MapPin className="text-slate-900 shrink-0" size={24} strokeWidth={1.5} />
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Lagos, Nigeria <br />
-                  <span className="text-sm text-slate-400">Available for projects across West Africa and beyond.</span>
+                  Nigeria <br />
+                  <span className="text-sm text-slate-400 font-medium">Committed to reliable building solutions across the country.</span>
                 </p>
               </div>
             </div>
@@ -93,13 +92,13 @@ export default function ContactPage() {
             <div className="space-y-6">
               <h3 className="font-mono text-[10px] uppercase tracking-[0.3em] text-orange-400 mb-6">Direct Channels</h3>
               
-              <a href="mailto:hello@planworkgroup.com" className="flex items-center gap-4 group">
+              <a href="mailto:info@towernigerialtd.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
                   <Mail className="text-slate-900 group-hover:text-orange-400 transition-colors" size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase text-slate-400">Email Us</p>
-                  <p className="text-lg font-semibold text-slate-900">hello@planworkgroup.com</p>
+                  <p className="text-lg font-semibold text-slate-900">info@towernigerialtd.com</p>
                 </div>
               </a>
 
@@ -109,29 +108,16 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase text-slate-400">Call Us</p>
-                  <p className="text-lg font-semibold text-slate-900">+234 (0) 000 000 0000</p>
+                  <p className="text-lg font-semibold text-slate-900">+234 XXX XXX XXXX</p>
                 </div>
               </a>
             </div>
 
-            {/* Social Connection */}
-            <div className="pt-8 border-t border-slate-100">
-              <h3 className="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-6">Socials</h3>
-              <div className="flex gap-4">
-                <a href="#" className="p-3 border border-slate-100 rounded-full hover:border-orange-400 hover:text-orange-400 transition-all">
-                  <Linkedin size={20} />
-                </a>
-                <a href="#" className="p-3 border border-slate-100 rounded-full hover:border-orange-400 hover:text-orange-400 transition-all">
-                  <Instagram size={20} />
-                </a>
-              </div>
-            </div>
-
-            {/* Business Hours Badge */}
+            {/* Business Commitment Badge */}
             <div className="bg-slate-900 p-8 text-white rounded-sm">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-orange-400 mb-2">Response Time</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-orange-400 mb-4">Our Commitment</p>
               <p className="text-sm leading-relaxed text-slate-300">
-                Our project coordination team typically responds to initial inquiries within 24 business hours.
+                Tower Nigeria Limited stands apart through structured execution, accountable leadership, and respect for the fundamentals of construction. 
               </p>
             </div>
 

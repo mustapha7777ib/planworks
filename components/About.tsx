@@ -5,23 +5,23 @@ import Link from "next/link";
 
 const differentiators = [
   {
-    title: "Integrated Delivery",
-    description: "True end-to-end capability across Design, Build, and Procurement under one roof.",
+    title: "Structural Integrity",
+    description: "Grounded in proven construction practices to ensure assets are built to last generations.",
     icon: Shield,
   },
   {
-    title: "Digital Rigor",
-    description: "Technology-enabled monitoring using BIM and AI analytics for total project transparency.",
+    title: "Modern Delivery",
+    description: "Combining traditional discipline with digital monitoring for total project transparency.",
     icon: Cpu,
   },
   {
-    title: "Execution Certainty",
-    description: "A proven track record in high-stakes sectors including Oil & Gas and Industrial infrastructure.",
+    title: "Accountable Leadership",
+    description: "A Nigerian-owned firm focused on method and preparation over improvisation.",
     icon: CheckCircle2,
   },
   {
-    title: "Project Velocity",
-    description: "An uncompromising focus on timely delivery, quality control, and cost efficiency.",
+    title: "Economic Viability",
+    description: "Strict adherence to planning to reduce risk, control costs, and ensure predictable outcomes.",
     icon: Timer,
   },
 ];
@@ -41,23 +41,20 @@ export default function AboutSection() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1]">
-              A forward-thinking, <br />
-              <span className="text-orange-400 italic font-medium">full-spectrum</span> <br />
-              execution company.
+              Reliable building <br />
+              <span className="text-orange-400 italic font-medium">& infrastructure</span> <br />
+              solutions.
             </h2>
             
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              Headquartered in Nigeria, Planwork Group Ltd combines traditional engineering rigor with 
-              modern technology-driven solutions. We bridge the gap between complex design and 
-              seamless physical delivery, empowering clients to achieve their objectives through 
-              efficiency, transparency, and sustainability.
+              Tower Nigeria Limited is a Nigerian-owned construction company delivering reliable building and infrastructure solutions across the country. We specialise in Design & Build, Construction, Procurement, and Project Management, combining traditional construction discipline with modern project delivery practices.
             </p>
 
             <Link 
               href="/about" 
               className="group inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-200"
             >
-              <span className="font-semibold tracking-wide">Learn More About Us</span>
+              <span className="font-semibold tracking-wide">Our Full Philosophy</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -80,15 +77,13 @@ export default function AboutSection() {
               ))}
             </div>
 
-            {/* Subtle "Sectors" footer */}
             <div className="mt-16 pt-8 border-t border-slate-200 flex flex-wrap gap-x-8 gap-y-4">
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400">Sector Expertise:</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Oil & Gas</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Construction</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Industrial</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400">Core Expertise:</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Design & Build</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Infrastructure</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Project Management</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>

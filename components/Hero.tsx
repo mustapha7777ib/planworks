@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
-// Import your images (adjust paths as needed)
+// Use your actual image paths
 import Building1 from '@public/images/building-1.webp';
 import Building2 from '@public/images/building-2.webp';
 import Building3 from '@public/images/building-3.webp';
@@ -14,28 +14,25 @@ const slides = [
   {
     id: 1,
     image: Building1,
-    title: "From Concept to Completion",
-    highlight: "Seamless Design, Construction, and Project Delivery for Every Sector",
-    description: "Planwork Group delivers fully integrated Design & Build solutions for complex infrastructure, managed under a single accountable framework.",
+    title: "From Foundation to Finish",
+    highlight: "Building Structures That Endure",
     cta: "Explore Our Services",
     link: "/services"
   },
   {
     id: 2,
     image: Building2,
-    title: "Precision in Every Project",
-    highlight: "Technology-driven planning, monitoring, and execution that ensures results on time and on budget",
-    description: "Technology-driven planning and disciplined execution that ensures structural integrity and financial certainty across every sector.",
-    cta: "Discover How",
-    link: "/services"
+    title: "Built on Discipline",
+    highlight: "Safe, reliable, and well-managed construction delivery",
+    cta: "Discover Our Approach",
+    link: "/about"
   },
   {
     id: 3,
     image: Building3,
-    title: "Building Value, Delivering Excellence",
-    highlight: "End-to-end solutions across construction, procurement, and project management consultancy",
-    description: "From strategic procurement to facility management, we provide end-to-end solutions that protect and optimize your physical assets.",
-    cta: "Get in Touch Today",
+    title: "Strength You Can Trust",
+    highlight: "Construction solutions delivered with integrity and precision",
+    cta: "Contact Us Today",
     link: "/contact"
   },
 ];
@@ -43,7 +40,6 @@ const slides = [
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-advance slides
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -51,60 +47,50 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const currentSlide = slides[currentIndex];
-
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      {/* Slides Container */}
-      <div
-        className="flex transition-transform duration-1000 ease-in-out h-full"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {slides.map((slide) => (
-          <div key={slide.id} className="w-full shrink-0 h-full relative">
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              priority={slide.id === 1}
-            />
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/50" />
-          </div>
-        ))}
-      </div>
+    <section className="relative w-full h-screen overflow-hidden bg-slate-900">
+      <AnimatePresence>
+        <motion.div
+          key={currentIndex}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 1 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={slides[currentIndex].image}
+            alt={slides[currentIndex].title}
+            fill
+            className="object-cover scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </motion.div>
+      </AnimatePresence>
 
-      {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.7 }}
-              className="text-center lg:text-left text-white"
+              transition={{ duration: 0.8 }}
+              className="text-white"
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-                {currentSlide.title}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-6">
+                {slides[currentIndex].title}
               </h1>
               
-              <h2 className="text-xl sm:text-2xl lg:text-3xl text-orange-400 mt-4 font-semibold">
-                {currentSlide.highlight}
+              <h2 className="text-xl md:text-3xl text-orange-400 font-medium italic mb-10">
+                {slides[currentIndex].highlight}
               </h2>
 
-              <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto lg:mx-0">
-                {currentSlide.description}
-              </p>
-
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex gap-4">
                 <Link
-                  href={currentSlide.link}
-                  className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-md transition-colors duration-300"
+                  href={slides[currentIndex].link}
+                  className="px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-sm transition-all duration-300 uppercase tracking-widest text-[10px]"
                 >
-                  {currentSlide.cta}
+                  {slides[currentIndex].cta}
                 </Link>
               </div>
             </motion.div>
@@ -112,18 +98,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-12 left-6 flex gap-4 items-center">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? 'bg-orange-400 scale-125'
-                : 'bg-white/60 hover:bg-white/80'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
+            className={`transition-all duration-500 ${
+              index === currentIndex ? 'w-12 bg-orange-400' : 'w-3 bg-white/40'
+            } h-1 rounded-full`}
           />
         ))}
       </div>

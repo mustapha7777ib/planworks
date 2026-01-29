@@ -5,7 +5,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import Logo from '@public/images/logo.jpeg';
+import Logo from '@public/images/logo.svg';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +22,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "About", href: "/about" },
+    {name: "Profile", href: "/profile" },
     { name: "Services", href: "/services" },
+    { name: "Safety", href: "/safety" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -42,13 +44,9 @@ export default function Navbar() {
             {/* Brand Logo */}
             <Link href="/" className="group flex items-center gap-2.5">
               <div className="flex items-center justify-centertransition-transform">
-                <img src={Logo.src} alt="Planwork Group Logo" className="w-10 h-10 object-contain rounded-lg " />
+                <img src={Logo.src} alt="Tower Nigeria Limited" className="w-30 h-10 object-contain rounded-lg " />
               </div>
-              <span className={cn(
-                "text-xl font-bold tracking-tighter text-orange-400"
-              )}>
-                Planwork Group
-              </span>
+
             </Link>
 
             {/* Desktop Links */}

@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Chen", 
     role: "Product Lead", 
     company: "TechCo",
-    text: "Planwork Group cut our planning time in half. It's the first tool our entire team actually uses daily." 
+    text: "Tower Nigeria Limited cut our planning time in half. It's the first tool our entire team actually uses daily." 
   },
   { 
     name: "Marcus Johnson", 
