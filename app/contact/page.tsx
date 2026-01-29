@@ -53,7 +53,7 @@ export default function ContactPage() {
                   <option>Building & Infrastructure Construction</option>
                   <option>Design & Build Services</option>
                   <option>Procurement & Supply Management</option>
-                  <option>Project Management & Site Supervision</option>
+                  <option>Project Management</option>
                 </select>
               </div>
 

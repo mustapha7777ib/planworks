@@ -31,9 +31,9 @@ const fullServices = [
   },
   {
     number: "04",
-    title: "Project Management & Site Supervision",
+    title: "Project Management",
     icon: <ClipboardCheck size={24} />,
-    description: "Tower Nigeria Limited provides hands-on project management and site supervision services that ensure works are executed safely and efficiently.",
+    description: "Tower Nigeria Limited provides hands-on project management services that ensure works are executed safely and efficiently.",
     details: "We coordinate contractors, manage progress, control costs, and enforce quality—acting as the client's reliable on-site representative from mobilisation to handover, ensuring adherence to approved designs and schedules.",
     tags: ["Contractor Coordination", "Progress Management", "Client Representation"]
   },
@@ -107,7 +107,7 @@ export default function ServicesPage() {
                     href="/contact" 
                     className="mt-10 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-900 hover:text-orange-400 transition-colors group/link"
                   >
-                    Discuss this service <ArrowUpRight size={16} className="group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
+                     Explore Our Services <ArrowUpRight size={16} className="group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                   </Link>
                 </div>
 
@@ -118,17 +118,19 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer Contact CTA */}
-      <section className="py-24 bg-[#0A0A0A] text-white">
-        <div className="container mx-auto px-6 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-10 tracking-tight">Ready to begin your project?</h3>
-            <Link 
-              href="/contact" 
-              className="inline-block border-2 border-orange-400 text-orange-400 px-12 py-5 font-bold hover:bg-orange-400 hover:text-black transition-all uppercase tracking-widest text-xs"
-            >
-              Partner with Tower Nigeria
-            </Link>
-        </div>
-      </section>
+      <section className="py-24 text-white bg-[#0A2540]" style={{ backgroundColor: '#0A2540' }}> {/* Use Tailwind HEX for consistency */}
+  <div className="container mx-auto px-6 text-center">
+    <h3 className="text-3xl md:text-4xl font-bold mb-10 tracking-tight">
+      Ready to begin your project?
+    </h3>
+    <Link 
+      href="/contact" 
+      className="inline-block border-2 border-orange-400 text-orange-400 px-12 py-5 font-bold uppercase tracking-widest text-xs transition-all duration-300 hover:bg-white px-20 hover:text-[#0A2540]"
+    >
+      Partner with Tower Nigeria
+    </Link>
+  </div>
+</section>
     </main>
   );
 }

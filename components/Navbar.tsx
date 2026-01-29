@@ -5,7 +5,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import Logo from '@public/images/logo.svg';
+import Logo from '@public/images/logo.png';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function Navbar() {
             
             {/* Brand Logo */}
             <Link href="/" className="group flex items-center gap-2.5">
-              <div className="flex items-center justify-centertransition-transform">
+              <div className="flex items-center justify-center transition-transform">
                 <img src={Logo.src} alt="Tower Nigeria Limited" className="w-30 h-10 object-contain rounded-lg " />
               </div>
 

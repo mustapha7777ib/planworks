@@ -7,7 +7,7 @@ const coreServices = [
   { title: "Design & Build Construction", icon: <Building2 size={18} /> },
   { title: "Building & Infrastructure Construction", icon: <HardHat size={18} /> },
   { title: "Procurement & Supply Management", icon: <Package size={18} /> },
-  { title: "Project Management & Site Supervision", icon: <ClipboardCheck size={18} /> },
+  { title: "Project Management", icon: <ClipboardCheck size={18} /> },
 ];
 
 const strengths = [

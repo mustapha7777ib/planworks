@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Linkedin, Instagram } from "lucide-react";
 // Ensure this path matches your logo location
-import Logo from '@public/images/logo.svg'; 
+import Logo from '@public/images/logo.png'; 
 
 const footerLinks = {
   services: [
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] font-mono uppercase text-slate-400 tracking-[0.15em]">
+          <p className="text-[10px] font-mono uppercase text-slate-800 tracking-[0.15em]">
             © {new Date().getFullYear()} Tower Nigeria Limited <span className="mx-2 text-slate-200">|</span> Reliable Construction
           </p>
         </div>

@@ -61,7 +61,7 @@ export default function VisionValues() {
       </section>
 
       {/* --- MISSION SECTION: DARK THEME --- */}
-      <section className="py-24 bg-[#0A0A0A] text-white">
+      <section className="py-24 text-white" style={{ backgroundColor: '#0A2540' }}>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -76,8 +76,8 @@ export default function VisionValues() {
                 <span className="text-slate-500">built to last.</span>
               </h2>
             </div>
-            <div className="bg-white/5 p-8 md:p-12 border border-white/10 backdrop-blur-sm">
-              <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <div className="bg-orange-500 p-8 md:p-12 border border-white/10 backdrop-blur-sm">
+              <p className="text-lg md:text-xl text-white leading-relaxed">
                 To deliver building and infrastructure solutions across Nigeria that combine traditional construction discipline with modern project delivery, ensuring every asset is structurally sound and economically viable.
               </p>
             </div>
