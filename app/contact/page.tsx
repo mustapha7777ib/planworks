@@ -19,7 +19,7 @@ export default function ContactPage() {
             <span className="text-orange-400 italic font-medium">with integrity.</span>
           </h1>
           <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
-            Tower Nigeria Limited is ready to partner with clients seeking reliable construction delivery rooted in discipline and professional workmanship.
+            Tower Nigeria Limited partners with clients seeking reliable construction delivery rooted in discipline and professional workmanship.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <button className="group flex items-center gap-3 bg-slate-900 text-white px-10 py-5 rounded-full hover:bg-orange-400 transition-all duration-300">
+              <button className="group flex items-center gap-3 bg-brand-blue text-white px-10 py-5 rounded-full hover:bg-orange-400 transition-all duration-300">
                 <span className="font-bold tracking-wide uppercase text-xs">Submit Inquiry</span>
                 <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
@@ -82,7 +82,7 @@ export default function ContactPage() {
               <div className="flex gap-4">
                 <MapPin className="text-slate-900 shrink-0" size={24} strokeWidth={1.5} />
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Nigeria <br />
+                  Abuja, Nigeria <br />
                   <span className="text-sm text-slate-400 font-medium">Committed to reliable building solutions across the country.</span>
                 </p>
               </div>
@@ -102,19 +102,19 @@ export default function ContactPage() {
                 </div>
               </a>
 
-              <a href="tel:+2340000000000" className="flex items-center gap-4 group">
+              <a href="tel:+2349069101050" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
                   <Phone className="text-slate-900 group-hover:text-orange-400 transition-colors" size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase text-slate-400">Call Us</p>
-                  <p className="text-lg font-semibold text-slate-900">+234 XXX XXX XXXX</p>
+                  <p className="text-lg font-semibold text-slate-900">+2349069101050</p>
                 </div>
               </a>
             </div>
 
             {/* Business Commitment Badge */}
-            <div className="bg-slate-900 p-8 text-white rounded-sm">
+            <div className="bg-brand-blue p-8 text-white rounded-sm">
               <p className="font-mono text-[10px] uppercase tracking-widest text-orange-400 mb-4">Our Commitment</p>
               <p className="text-sm leading-relaxed text-slate-300">
                 Tower Nigeria Limited stands apart through structured execution, accountable leadership, and respect for the fundamentals of construction. 

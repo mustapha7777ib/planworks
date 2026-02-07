@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Planwork Group | Integrated Design, Construction & Project Management",
+  title: "Tower Nigeria Limited | Integrated Design, Construction & Project Management",
   description: "A technology-enabled project delivery group specializing in Design & Build, Procurement, and PMC across Africa.",
 };
 

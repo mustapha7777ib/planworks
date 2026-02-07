@@ -28,14 +28,14 @@ export default function ContactCTA() {
             </h2>
 
             <p className="text-xl text-slate-500 max-w-xl mb-12 leading-relaxed">
-              Tower Nigeria Limited is ready to partner with clients seeking 
+              Tower Nigeria Limited partners with clients seeking 
               reliable construction delivery rooted in discipline and integrity.
             </p>
 
             {/* High-Impact Email Button */}
             <Link 
               href="mailto:info@towernigerialtd.com" 
-              className="group inline-flex items-center gap-6 bg-slate-900 text-white p-2 pr-8 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-100"
+              className="group inline-flex items-center gap-6 bg-brand-blue text-white p-2 pr-8 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-100"
             >
               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-orange-400 transition-colors">
                 <Mail size={20} />
@@ -56,7 +56,7 @@ export default function ContactCTA() {
                 <Phone size={18} />
                 <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Direct Line</span>
               </div>
-              <p className="text-lg font-bold text-slate-900">+234 XXX XXX XXXX</p>
+              <p className="text-lg font-bold text-slate-900">+2349069101050</p>
             </div>
 
             {/* Location Info */}

@@ -52,7 +52,7 @@ export default function AboutSection() {
 
             <Link 
               href="/about" 
-              className="group inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-200"
+              className="group inline-flex items-center gap-3 bg-brand-blue text-white px-8 py-4 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-200"
             >
               <span className="font-semibold tracking-wide">Our Full Philosophy</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -79,9 +79,9 @@ export default function AboutSection() {
 
             <div className="mt-16 pt-8 border-t border-slate-200 flex flex-wrap gap-x-8 gap-y-4">
               <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400">Core Expertise:</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Design & Build</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Infrastructure</span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-slate-900 font-bold">Project Management</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-brand-blue font-bold">Design & Build</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-brand-blue font-bold">Infrastructure</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-brand-blue font-bold">Project Management</span>
             </div>
           </div>
         </div>

@@ -22,7 +22,6 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "About", href: "/about" },
-    {name: "Profile", href: "/profile" },
     { name: "Services", href: "/services" },
     { name: "Safety", href: "/safety" },
     { name: "Contact Us", href: "/contact" },
@@ -46,7 +45,11 @@ export default function Navbar() {
               <div className="flex items-center justify-center transition-transform">
                 <img src={Logo.src} alt="Tower Nigeria Limited" className="w-30 h-10 object-contain rounded-lg " />
               </div>
-
+            <span className={cn(
+                "text-xl font-bold tracking-tighter text-orange-400"
+              )}>
+                TOWER NIGERIA
+              </span>
             </Link>
 
             {/* Desktop Links */}
@@ -56,7 +59,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "text-[13px] font-mono uppercase tracking-widest transition-all hover:opacity-60 text-slate-300",
+                    "text-[13px] font-mono uppercase tracking-widest transition-all hover:text-orange-400 text-slate-400",
                     scrolled ? "text-slate-600" : ""
                   )}
                 >
