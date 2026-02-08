@@ -16,7 +16,7 @@ const differentiators = [
   },
   {
     title: "Accountable Leadership",
-    description: "A Nigerian-owned firm focused on method and preparation over improvisation.",
+    description: "A construction firm focused on method and preparation over improvisation.",
     icon: CheckCircle2,
   },
   {
@@ -47,7 +47,7 @@ export default function AboutSection() {
             </h2>
             
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              Tower Nigeria Limited is a Nigerian-owned construction company delivering reliable building and infrastructure solutions across the country. We specialise in Design & Build, Construction, Procurement, and Project Management, combining traditional construction discipline with modern project delivery practices.
+              Tower Nigeria Limited is a construction company delivering reliable building and infrastructure solutions across the country. We specialise in Design & Build, Construction, Procurement, and Project Management, combining traditional construction discipline with modern project delivery practices.
             </p>
 
             <Link 
@@ -60,17 +60,17 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: Key Differentiators Grid */}
-          <div className="lg:col-span-7 bg-slate-50 p-8 md:p-12 lg:p-16 rounded-sm border border-slate-100">
+          <div className="lg:col-span-7 bg-brand-blue p-8 md:p-12 lg:p-16 rounded-sm border border-slate-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {differentiators.map((item, index) => (
                 <div key={index} className="space-y-4">
-                  <div className="w-10 h-10 bg-white flex items-center justify-center shadow-sm border border-slate-100 text-orange-400">
+                  <div className="w-10 h-10 flex items-center justify-center shadow-sm  text-orange-400">
                     <item.icon size={20} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-bold text-slate-900 tracking-tight">
+                  <h3 className="font-bold text-white tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-white leading-relaxed">
                     {item.description}
                   </p>
                 </div>

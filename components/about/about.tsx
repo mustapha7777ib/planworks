@@ -15,40 +15,6 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-const fullServices = [
-  {
-    number: "01",
-    title: "Design & Build Services",
-    icon: <Settings size={24} />,
-    description: "Tower Nigeria Limited provides integrated Design & Build solutions that combine architectural intent, engineering precision, and construction execution under one accountable structure.",
-    details: "From concept development and detailed design through construction and commissioning, we ensure seamless coordination and accelerated delivery. Our approach aligns design decisions with construction realities to optimise cost, quality, and schedule performance.",
-    tags: ["Architectural Intent", "Engineering Precision", "Interface Risk Reduction"]
-  },
-  {
-    number: "02",
-    title: "Construction of Buildings & Infrastructure",
-    icon: <HardHat size={24} />,
-    description: "We deliver comprehensive construction services for buildings and infrastructure, producing durable, compliant, and high-quality assets.",
-    details: "Our portfolio spans residential developments, commercial facilities, and industrial works. We operate with rigorous safety management, quality assurance, and project controls—delivering on time, within budget, and to specification.",
-    tags: ["Safety Management", "Quality Assurance", "Project Controls"]
-  },
-  {
-    number: "03",
-    title: "Procurement & Supply Management",
-    icon: <Truck size={24} />,
-    description: "Our procurement services protect project value through structured sourcing, supplier management, and logistics coordination.",
-    details: "We manage materials, equipment, and specialist services with a focus on cost efficiency and transparency. By combining market knowledge with disciplined processes, we minimise supply risk and ensure technical alignment.",
-    tags: ["Strategic Sourcing", "Logistics Coordination", "Cost Efficiency"]
-  },
-  {
-    number: "04",
-    title: "Project Management",
-    icon: <ClipboardCheck size={24} />,
-    description: "Tower Nigeria Limited provides hands-on project management services that ensure works are executed safely and efficiently.",
-    details: "We coordinate contractors, manage progress, control costs, and enforce quality—acting as the client's reliable on-site representative from mobilisation to handover, ensuring adherence to approved designs and schedules.",
-    tags: ["Contractor Coordination", "Progress Management", "Client Representation"]
-  },
-];
 
 const values = [
   {
@@ -168,7 +134,7 @@ export default function AboutAndServices() {
                 Commitment
               </p>
               <p className="text-white text-lg font-medium">
-                We do not chase shortcuts—we build correctly, responsibly, and for the long term.
+                We do not chase shortcuts ,we build correctly, responsibly, and for the long term.
               </p>
             </div>
           </div>
@@ -176,66 +142,7 @@ export default function AboutAndServices() {
       </section>
 
       {/* --- SERVICES SECTION --- */}
-      <section className="py-24 border-t border-slate-100">
-        <div className="container mx-auto px-6 mb-16">
-          <div className="flex items-center gap-2 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em] mb-6">
-            <Minus size={16} />
-            <span>OUR SERVICES</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 leading-tight">
-            Disciplined <span className="text-orange-400">Execution.</span>
-          </h2>
-        </div>
-
-        {fullServices.map((service) => (
-          <div 
-            key={service.number} 
-            className="border-b border-slate-100 group hover:bg-slate-50 transition-colors duration-500"
-          >
-            <div className="container mx-auto px-6 py-24">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div className="lg:col-span-1 flex flex-col justify-between">
-                  <span className="font-mono text-2xl text-slate-200 group-hover:text-orange-400 transition-colors">
-                    {service.number}
-                  </span>
-                  <div className="text-slate-200 group-hover:text-slate-900 transition-colors hidden lg:block">
-                    {service.icon}
-                  </div>
-                </div>
-
-                <div className="lg:col-span-5">
-                  <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                    {service.title}
-                  </h2>
-                  <p className="text-lg font-medium text-slate-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.map(tag => (
-                      <span key={tag} className="text-[9px] font-mono uppercase tracking-widest bg-white border border-slate-200 px-3 py-1.5 text-slate-500">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="lg:col-span-5 lg:col-start-8 flex flex-col justify-center">
-                  <p className="text-slate-500 leading-relaxed text-base">
-                    {service.details}
-                  </p>
-                  <Link 
-                    href="/contact" 
-                    className="mt-10 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-900 hover:text-orange-400 transition-colors group/link"
-                  >
-                     Work With Us <ArrowUpRight size={16} className="group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
-
+     
       {/* --- FINAL CONTACT CTA --- */}
       <section className="py-24 text-white bg-[#0A2540]">
         <div className="container mx-auto px-6 text-center">

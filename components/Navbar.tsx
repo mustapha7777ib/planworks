@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import Logo from '@public/images/logo.png';
 
 export default function Navbar() {
@@ -17,7 +16,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu when clicking a link
   const closeMenu = () => setMobileMenuOpen(false);
 
   const navLinks = [
@@ -32,34 +30,39 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled 
-            ? "py-3 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm" 
+            ? "py-3 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm" 
             : "py-6 bg-transparent"
         )}
       >
-        <div className="container mx-auto px-6 lg:px-12">
+        {/* REMOVED mx-auto to move everything further to the left edge */}
+        <div className="w-full px-6 lg:px-20">
           <div className="flex items-center justify-between">
             
-            {/* Brand Logo */}
-            <Link href="/" className="group flex items-center gap-2.5">
-              <div className="flex items-center justify-center transition-transform">
-                <img src={Logo.src} alt="Tower Nigeria Limited" className="w-30 h-10 object-contain rounded-lg " />
+            {/* Logo and Text Group: gap-1.5 keeps them very close */}
+            <Link href="/" className="group flex items-center gap-1.5 shrink-0">
+              <div className="flex items-center justify-center">
+                <img 
+                  src={Logo.src} 
+                  alt="Tower Nigeria Limited" 
+                  className="w-auto h-8 md:h-10 object-contain" 
+                />
               </div>
-            <span className={cn(
-                "text-xl font-bold tracking-tighter text-orange-400"
+              <span className={cn(
+                "text-lg md:text-xl font-bold tracking-tighter transition-colors duration-300 text-orange-500"
               )}>
                 TOWER NIGERIA
               </span>
             </Link>
 
             {/* Desktop Links */}
-            <nav className="hidden md:flex items-center gap-10">
+            <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "text-[13px] font-mono uppercase tracking-widest transition-all hover:text-orange-400 text-slate-400",
-                    scrolled ? "text-slate-600" : ""
+                    "text-[12px] font-mono uppercase tracking-widest transition-all hover:text-orange-400",
+                    scrolled ? "text-slate-600" : "text-slate-300"
                   )}
                 >
                   {link.name}
@@ -70,7 +73,7 @@ export default function Navbar() {
             {/* Mobile Toggle */}
             <button
               className={cn(
-                "md:hidden p-2 transition-colors",
+                "md:hidden p-2",
                 scrolled ? "text-slate-900" : "text-white"
               )}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -81,32 +84,28 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu: Expands downward below the navbar */}
-     <div
-  className={cn(
-    "fixed left-0 right-0 bg-white/70 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-500 ease-in-out md:hidden",
-    "z-40",
-    mobileMenuOpen
-      ? "max-h-96 opacity-100 border-b border-slate-200/40"
-      : "max-h-0 opacity-0"
-  )}
-  style={{ top: scrolled ? "68px" : "96px" }}
->
-  <div className="container mx-auto px-6 lg:px-12 py-8">
-    <nav className="flex flex-col gap-6 mb-8">
-      {navLinks.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          onClick={closeMenu}
-          className="text-3xl font-bold tracking-tight text-slate-900 hover:text-orange-400 transition-colors"
-        >
-          {link.name}
-        </Link>
-      ))}
-    </nav>
-  </div>
-
+      {/* Mobile Menu */}
+      <div
+        className={cn(
+          "fixed left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-500 ease-in-out md:hidden z-40",
+          mobileMenuOpen ? "max-h-96 opacity-100 border-b" : "max-h-0 opacity-0"
+        )}
+        style={{ top: scrolled ? "60px" : "88px" }}
+      >
+        <div className="px-6 py-8">
+          <nav className="flex flex-col gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={closeMenu}
+                className="text-2xl font-bold text-slate-900 hover:text-orange-400"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </>
   );

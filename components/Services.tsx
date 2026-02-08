@@ -29,7 +29,7 @@ const services = [
     tag: "Supply Chain"
   },
   {
-    title: "Project Management & Supervision",
+    title: "Project Management",
     description: "Structured oversight that keeps projects on track and under control.",
     icon: ClipboardCheck,
     tag: "Governance"

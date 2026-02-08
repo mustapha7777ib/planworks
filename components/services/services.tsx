@@ -18,8 +18,8 @@ const fullServices = [
     number: "02",
     title: "Construction of Buildings & Infrastructure",
     icon: <HardHat size={24} />,
-    description: "We deliver comprehensive construction services for buildings and infrastructure, producing durable, compliant, and high-quality assets.",
-    details: "Our portfolio spans residential developments, commercial facilities, and industrial works. We operate with rigorous safety management, quality assurance, and project controls—delivering on time, within budget, and to specification.",
+    description: "We deliver comprehensive construction services for buildings and infrastructure, producing durable, compliant, and high quality assets.",
+    details: "Our portfolio spans residential developments, commercial facilities, and industrial works. We operate with rigorous safety management, quality assurance, and project controls delivering on time, within budget, and to specification.",
     tags: ["Safety Management", "Quality Assurance", "Project Controls"]
   },
   {
@@ -34,8 +34,8 @@ const fullServices = [
     number: "04",
     title: "Project Management",
     icon: <ClipboardCheck size={24} />,
-    description: "Tower Nigeria Limited provides hands-on project management services that ensure works are executed safely and efficiently.",
-    details: "We coordinate contractors, manage progress, control costs, and enforce quality—acting as the client's reliable on-site representative from mobilisation to handover, ensuring adherence to approved designs and schedules.",
+    description: "Tower Nigeria Limited provides hands on project management services that ensure works are executed safely and efficiently.",
+    details: "We coordinate contractors, manage progress, control costs, and enforce quality acting as the client's reliable on site representative from mobilisation to handover, ensuring adherence to approved designs and schedules.",
     tags: ["Contractor Coordination", "Progress Management", "Client Representation"]
   },
 ];
