@@ -11,11 +11,13 @@ const complianceFeatures = [
 
 export default function Readiness() {
   return (
-    <section className="py-24 border-y border-slate-100 bg-brand-blue">
-      <div className="container mx-auto px-6 ">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <section className="border-y border-slate-100 overflow-hidden">
+      <div className="container mx-auto px-6">
+        {/* items-stretch ensures both columns are the same height */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
           
-          <div className="lg:col-span-7 ">
+          {/* Left Side: Text Content */}
+          <div className="lg:col-span-7 py-24 pr-0 lg:pr-16">
             <div className="flex items-center gap-2 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em] mb-8">
               <Minus size={16} />
               <span>Institutional Readiness</span>
@@ -37,10 +39,14 @@ export default function Readiness() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 ">
-            <div className="grid grid-cols-1 gap-4 ">
+          {/* Right Side: Fixed-width Blue Column */}
+          <div className="lg:col-span-5 bg-brand-blue flex flex-col justify-center p-8 lg:p-12">
+            <div className="grid grid-cols-1 gap-4 w-full">
               {complianceFeatures.map((item, index) => (
-                <div key={index} className="flex items-center gap-4 bg-white p-6 border border-slate-200 shadow-sm group hover:border-orange-400 transition-colors">
+                <div 
+                  key={index} 
+                  className="flex items-center gap-4 bg-white p-6 border border-slate-200 shadow-sm group hover:border-orange-400 transition-colors"
+                >
                   <div className="w-12 h-12 bg-slate-50 flex items-center justify-center text-orange-400 group-hover:bg-orange-400 group-hover:text-white transition-all">
                     {item.icon}
                   </div>

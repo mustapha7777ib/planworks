@@ -48,7 +48,7 @@ export default function Sustainability() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-slate-400 font-mono text-[11px] uppercase tracking-widest max-w-xl mx-auto">
+          <p className="text-black font-mono text-[11px] uppercase tracking-widest max-w-xl mx-auto">
             Tower Nigeria Limited: Creating assets that serve communities and clients for generations.
           </p>
         </div>

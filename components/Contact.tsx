@@ -34,15 +34,15 @@ export default function ContactCTA() {
 
             {/* High-Impact Email Button */}
             <Link 
-              href="mailto:info@towernigerialtd.com" 
-              className="group inline-flex items-center gap-6 bg-brand-blue text-white p-2 pr-8 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-100"
+              href="mailto:info@towernigeria.com" 
+              className="group inline-flex items-center gap-6 bg-slate-900 text-white p-2 pr-8 rounded-full hover:bg-orange-400 transition-all duration-300 shadow-xl shadow-slate-100"
             >
               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-orange-400 transition-colors">
                 <Mail size={20} />
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 group-hover:text-white/80">Start a Conversation</span>
-                <span className="font-bold tracking-tight">info@towernigerialtd.com</span>
+                <span className="font-bold tracking-tight">info@towernigeria.com</span>
               </div>
               <ArrowRight size={20} className="ml-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </Link>
@@ -56,7 +56,7 @@ export default function ContactCTA() {
                 <Phone size={18} />
                 <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Direct Line</span>
               </div>
-              <p className="text-lg font-bold text-slate-900">+2349069101050</p>
+              <p className="text-lg font-bold text-slate-900">+2349069101050 +2349133228324</p>
             </div>
 
             {/* Location Info */}
@@ -65,15 +65,15 @@ export default function ContactCTA() {
                 <MapPin size={18} />
                 <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Headquarters</span>
               </div>
-              <p className="text-lg font-bold text-slate-900">Nigeria</p>
+              <p className="text-lg font-bold text-slate-900">Abuja, Nigeria</p>
             </div>
 
             {/* Brand Signature */}
             <div className="pt-8 border-t border-slate-100">
               <p className="text-sm text-slate-400 leading-relaxed italic">
-                Tower Nigeria Limited — <br />
-                Building with strength. <br />
-                Delivering with integrity.
+                Tower Nigeria Limited, <br />
+                Building Structures  <br />
+               That Endure The Test of Time
               </p>
             </div>
           </div>

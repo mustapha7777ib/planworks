@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <label className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Email Address</label>
                   <input 
                     type="email" 
-                    placeholder="email@company.com"
+                    placeholder="info@towernigeria.com"
                     className="w-full bg-slate-50 border-b border-slate-200 p-4 focus:border-orange-400 focus:outline-none transition-colors"
                   />
                 </div>
@@ -92,23 +92,24 @@ export default function ContactPage() {
             <div className="space-y-6">
               <h3 className="font-mono text-[10px] uppercase tracking-[0.3em] text-orange-400 mb-6">Direct Channels</h3>
               
-              <a href="mailto:info@towernigerialtd.com" className="flex items-center gap-4 group">
+              <a href="mailto:info@towernigeria.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
                   <Mail className="text-slate-900 group-hover:text-orange-400 transition-colors" size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase text-slate-400">Email Us</p>
-                  <p className="text-lg font-semibold text-slate-900">info@towernigerialtd.com</p>
+                  <p className="text-lg font-semibold text-slate-900">info@towernigeria.com</p>
                 </div>
               </a>
 
-              <a href="tel:+2349069101050" className="flex items-center gap-4 group">
+              <a href="tel:+2349069101050
+              +2349133228324" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors">
                   <Phone className="text-slate-900 group-hover:text-orange-400 transition-colors" size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase text-slate-400">Call Us</p>
-                  <p className="text-lg font-semibold text-slate-900">+2349069101050</p>
+                  <p className="text-lg font-semibold text-slate-900">+2349069101050 +2349133228324</p>
                 </div>
               </a>
             </div>
